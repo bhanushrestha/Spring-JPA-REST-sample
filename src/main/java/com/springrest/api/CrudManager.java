@@ -1,4 +1,4 @@
-package com.springtest.api;
+package com.springrest.api;
 
 import java.io.Serializable;
 import java.util.List;

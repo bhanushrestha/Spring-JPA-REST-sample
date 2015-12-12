@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.springrest.api.CustomerManager;
 import com.springrest.domain.Customer;
-import com.springtest.api.CustomerManager;
 
 @RestController
 @RequestMapping(value="/customer")

@@ -5,9 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.springrest.api.CustomerManager;
 import com.springrest.domain.Customer;
 import com.springrest.repository.CustomerRespository;
-import com.springtest.api.CustomerManager;
 
 @Service
 public class CustomerManagerImpl implements CustomerManager {

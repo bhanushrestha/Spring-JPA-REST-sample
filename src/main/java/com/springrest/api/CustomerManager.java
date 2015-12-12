@@ -1,4 +1,4 @@
-package com.springtest.api;
+package com.springrest.api;
 
 import com.springrest.domain.Customer;
 
