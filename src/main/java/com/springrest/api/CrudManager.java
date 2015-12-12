@@ -3,7 +3,7 @@ package com.springrest.api;
 import java.io.Serializable;
 import java.util.List;
 
-public interface CrudManager<T extends Serializable, Pk extends Serializable> {
+public interface CrudManager<Entity extends Serializable, PrimaryKey extends Serializable> {
 
 	/**
 	 * * Add new record
@@ -11,28 +11,28 @@ public interface CrudManager<T extends Serializable, Pk extends Serializable> {
 	 * @param t
 	 * @return object if successfully done otherwise return null
 	 */
-	public T addNew(T t);
+	public Entity addNew(Entity t);
 
 	/**
 	 * * Add list of records
 	 *
 	 * @param list
 	 */
-	public void addAll(List<T> list);
+	public void addAll(List<Entity> list);
 
 	/**
 	 * * Update record with given data
 	 *
 	 * @param t
 	 */
-	public T update(T t);
+	public Entity update(Entity t);
 
 	/**
 	 * * remove given record
 	 *
 	 * @param t
 	 */
-	public void remove(T t);
+	public void remove(Entity t);
 
 	/**
 	 * * remove by given ID/Code .
@@ -40,7 +40,7 @@ public interface CrudManager<T extends Serializable, Pk extends Serializable> {
 	 * @param id
 	 *            which is must be unique
 	 */
-	public void removeBy(Pk id);
+	public void removeBy(PrimaryKey id);
 
 	/**
 	 * * Find record with given id
@@ -48,14 +48,13 @@ public interface CrudManager<T extends Serializable, Pk extends Serializable> {
 	 * @param id
 	 * @return record if found otherwise return null
 	 */
-	public T find(Pk id);
+	public Entity find(PrimaryKey id);
 
 	/**
 	 * * Find all records
 	 *
-	 * @return
 	 */
-	public List<T> findAll();
+	public List<Entity> findAll();
 
 	/**
 	 * * Find all record with paging
@@ -64,7 +63,7 @@ public interface CrudManager<T extends Serializable, Pk extends Serializable> {
 	 * @param index
 	 * @return
 	 */
-	public List<T> findWithPaging(int page, int size);
+	public List<Entity> findWithPaging(int page, int size);
 
 	/**
 	 * * Count total number of records
